@@ -15,16 +15,18 @@ public class CamionDeReparto extends Transporte {
         }
         if (tieneRefrigeracion == true) {
             int unidadesConsumidas = distancia / 5;
-            double nuevoCombustible = this.combustible() - unidadesConsumidas;
+            double nuevoCombustible = getCombustible() - unidadesConsumidas;
+setCombustible(nuevoCombustible);
             this.setCombustible(nuevoCombustible);
         } else {
             int unidadesConsumidas = distancia / 10;
-            double nuevoCombustible = this.combustible() - unidadesConsumidas;
+           double nuevoCombustible = getCombustible() - unidadesConsumidas;
+setCombustible(nuevoCombustible);
             this.setCombustible(nuevoCombustible);
         }
-        if (this.combustible() < 0) {
+        if (this.getCombustible() < 0) {
             this.setCombustible(0);
         }
-        return this.combustible();
+        return this.getCombustible();
     }
 }

@@ -17,23 +17,21 @@ public class Transporte {
         return idTransporte;
     }
 
-    public double combustible() {
-        return combustible;
-    }
+    
 
     public double getCombustible() {
         return combustible;
     }
 
-    public double setCombustible(double nivel) {
-        if (nivel < 0) {
-            nivel = 0;
-        } else if (nivel > 100) {
-            nivel = 100;
-        }
+  public void setCombustible(double nivel) {
+    if (nivel < 0) {
+        this.combustible = 0;
+    } else if (nivel > 100) {
+        this.combustible = 100;
+    } else {
         this.combustible = nivel;
-        return this.combustible;
     }
+}
 
     public double capacidadCarga() {
         return capacidadCarga;
